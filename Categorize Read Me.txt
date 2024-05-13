@@ -1,0 +1,32 @@
+Requirements
+Python 3.x
+Transformers: pip install transformers
+Pandas: pip install pandas
+Tkinter: typically included with Python’s standard library
+Instructions
+Setup Your Environment:
+Ensure you have Python installed and have installed the necessary libraries via pip.
+
+Prepare Your Data:
+Your input should be a CSV file where the text data for classification is present in a column named 'Review'.
+
+Run the Script:
+Execute the script by running python CategorizeReviews.py from your command line.
+
+Select the Input File:
+
+Upon execution, a file dialog will appear. Use it to select your CSV file containing the reviews.
+Enter Categories:
+
+A prompt will ask you to input the categories you want to classify your text into. Enter the categories separated by commas (e.g., "food, service, ambiance").
+Review Classification:
+
+The script will use a zero-shot classification model (facebook/bart-large-mnli) to categorize each review into the specified categories and calculate confidence scores for each category.
+After processing, it will prompt you to save the output file. This output CSV file will include the original review data and new columns for each category with corresponding scores.
+Save and Review the Results:
+
+Choose a location and save the output CSV file. The script will then save the DataFrame to the new CSV file and print a confirmation message with the path to the saved file.
+Open the output CSV file in any spreadsheet software to view the classification results.
+Notes:
+The zero-shot classification method allows the model to classify text into categories that were not present in the model's training data, making it versatile for various types of text data.
+Ensure your input data is clean and well-formatted to avoid errors during processing.
